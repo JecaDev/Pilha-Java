@@ -1,0 +1,53 @@
+package pacote;
+import java.util.Stack;
+import java.util.Scanner;
+public class exemploPilha {
+
+	public static void main(String[] args) {
+  //Pilha para armazenar nomes
+	//Criação da pilha usando Stack
+	Stack<String> pilha = new Stack<String>();
+ 
+	//Verificar se a pilha está vazia
+	if(!pilha.empty()) {
+		System.out.println("Pilha Vazia");
+	}else {
+		System.out.println("A Pilha possui elemtentos");
+	}
+  //Adicionar nome e verificar se está vazia
+	pilha.push("Angela");
+	System.out.println("Verificando que se a lista esta vazia --> " + pilha.empty());
+	;
+	pilha.addElement("Osvaldo");
+	pilha.push("Semiramis");
+	pilha.push("Cristiane");
+	pilha.push("Carlos");
+	pilha.push("Chico");
+	pilha.push("Rosa");
+	pilha.push("Léo");
+	pilha.push("Rodrigues");
+	pilha.push("Maiara");
+	
+	
+	//Verificar o tamanho da pilha
+	System.out.println("Eis aqui a sua pilha de tamanho " + pilha.size() + ": ");
+	for(int i = 0; i<pilha.size(); i++) {
+	System.out.println(pilha.get(i));
+	}
+	//removendo do topo da pilha
+	pilha.pop();
+  //mostrar o tamanho da pilha
+	System.out.println("Eis aqui a sua pilha de tamanho " + pilha.size() + ": ");
+	for(int i = 0; i<pilha.size(); i++) {
+	System.out.println(pilha.get(i));
+	}
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Insira um nome na lista");
+	pilha.push(sc.next());
+	
+	System.out.println("Eis aqui a sua pilha de tamanho " + pilha.size() + ": ");
+	for(int i = 0; i<pilha.size(); i++) {
+	System.out.println(pilha.get(i));
+	}
+	}
+}
